@@ -7,7 +7,7 @@ const app = express();
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/privacy-policy'));
 
-app.get('/*', function(req,res) {
+app.get('/policy', function(req,res) {
     
 res.sendFile(path.join(__dirname+'/dist/privacy-policy/index.html'));
 });
